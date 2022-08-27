@@ -1,0 +1,28 @@
+.doubt-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - var(--header-height));
+  width: 100vw;
+  background: var(--color-base);
+}
+
+@media only screen and (min-width: 1201px) {
+  .doubt-page-container {
+    padding-left: 344px;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .doubt-page-container {
+    padding-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .doubt-page-container {
+    padding-top: 8px;
+    min-height: calc(100vh - var(--header-height) + var(--popup-height));
+    padding-bottom: 58px;
+  }
+}

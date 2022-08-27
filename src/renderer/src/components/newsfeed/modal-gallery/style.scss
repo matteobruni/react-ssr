@@ -1,0 +1,13 @@
+.closeList {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 15000;
+  svg {
+    color: white;
+    cursor: pointer;
+    z-index: 1510;
+    background: grey;
+    border-radius: 50%;
+  }
+}

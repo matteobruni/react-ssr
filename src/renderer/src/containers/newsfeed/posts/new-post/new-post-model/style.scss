@@ -1,0 +1,64 @@
+@import "../../../../../styles/variables.scss";
+
+.newPostModel {
+  width: 460px;
+  @media only screen and (max-width: 430px) {
+    width: 100vw;
+    height: 100vh;
+  
+  }
+}
+
+.dark-new-post-modal {
+  background: #171718;
+  border: 1px solid rgba(70, 70, 70, 0.35);
+  border-radius: 7.5px;
+}
+
+.closeIcon__container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.removevideo__button, .removeyoutube__button {
+  position: absolute;
+  top: 20px;
+  right: 3px;
+  background-color: rgba(165, 42, 42, 0.774);
+  padding: 4px 8px;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+
+  i {
+    margin-top: 0.1rem;
+    font-size: 16px;
+  }
+}
+
+.removeyoutube__button {
+  top: 3px !important;
+}
+
+.new-post-content__youtubeSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  z-index: 0;
+  position: relative;
+  //margin-right: 16px;
+
+  .new-post-content__youtubeSectionContainer {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30px;
+    position: relative;
+  }
+}

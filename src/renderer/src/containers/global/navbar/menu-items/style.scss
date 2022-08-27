@@ -1,0 +1,297 @@
+@import "../../../../styles/variables.scss";
+
+.header__middle-md {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: transparent !important;
+  //position: absolute;
+  //left: 50%;
+  //transform: translateX(-50%);
+  width: 100px;
+  //height: 80px;
+
+  > svg {
+    position: absolute;
+    top: -5px;
+    path {
+      fill: var(--color-primary);
+      transition: .2s ease-in-out;
+    }
+  }
+
+  > a {
+    position: absolute;
+    top: 90px;
+    transition: .2s ease-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  min-height: var(--header-height);
+
+  @media only screen and (max-width: 430px) {
+    border-top: 3px solid transparent;
+    border-bottom: none;
+    border-radius: 0%;
+
+    &:hover {
+      background: none !important;
+      border-bottom: 0px solid transparent !important;
+    }
+  }
+
+  .nav__box__wrapper {
+    margin: 0 auto;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(var(--header-height) - 4px);
+    max-height: calc(var(--header-height) - 4px);
+
+    .nav__icon .has__sessions {
+      .red__wrapper {
+        position: relative;
+        .dot__red {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: rgb(199, 21, 56);
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 5;
+
+          &.count {
+            width: 14px;
+            height: 14px;
+            left: 15%;
+            top: 2.5px;
+            border: 2px solid var(--color-primary);
+          }
+        }
+
+        .red__bg {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 15px;
+      right: 25%;
+    }
+
+    p {
+      padding-top: 0px;
+      font-size: 11px;
+      color: rgb(141, 141, 141);
+    }
+
+    .nav__icon {
+      .nav__icon__img {
+        height: 100%;
+        width: 100%;
+        transition: all ease-in-out 0s;
+        filter: invert(65%) sepia(0%) saturate(0%) hue-rotate(346deg)
+        brightness(91%) contrast(90%);
+      }
+    }
+
+    &:hover {
+      background: var(--color-focus);
+      color: var(--color-highlight);
+
+      .nav__icon {
+        .nav__icon__img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      &:hover {
+        background: none !important;
+        border-bottom: 0px solid transparent !important;
+      }
+    }
+  }
+
+  &.active:hover {
+    background: none;
+    color: none;
+  }
+
+  &.active {
+    border-bottom: 3px solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-image-slice: 1;
+    border-radius: 0px !important;
+    overflow: hidden;
+
+    &.homepage {
+      border-image-source: var(--var-border-home-icon);
+    }
+    &.videos {
+      border-image-source: var(--var-border-videos-icon);
+    }
+    &.doubts {
+      border-image-source: var(--var-border-doubts-icon);
+    }
+    &.news {
+      border-image-source: var(--var-border-news-icon);
+    }
+    &.blaze {
+      border-image-source: var(--var-border-blaze-icon);
+    }
+
+    .nav__box__wrapper {
+      p {
+        color: var(--color-text);
+      }
+      &:hover {
+        background: none;
+        color: none;
+      }
+    }
+
+    .nav__icon {
+      .nav__icon__img {
+        height: 100%;
+        width: 100%;
+        filter: none !important;
+
+        @media only screen and (max-width: 430px) {
+          filter: var(--filter-nav-icons-active);
+        }
+      }
+    }
+    @media only screen and (max-width: 430px) {
+      border-top: 3px solid;
+      border-bottom: none;
+      border-radius: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .navbar-item {
+    .nav__box__wrapper {
+      padding: 0 32px !important;
+
+      .nav__icon .has__sessions {
+        .red__wrapper {
+          .dot__red {
+            top: 49%;
+            left: 49%;
+          }
+        }
+        top: 14px !important;
+        right: 15% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .navbar-item {
+    .nav__box__wrapper {
+      padding: 0 26px !important;
+
+      .nav__icon .has__sessions {
+        .red__wrapper {
+          .dot__red {
+            top: 49%;
+            left: 49%;
+          }
+        }
+        top: 14px !important;
+        right: 10% !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar-item {
+    .nav__box__wrapper {
+      padding: 0 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .navbar-item {
+    .nav__box__wrapper {
+      padding: 0px 36px;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .header__middle {
+    position: relative;
+    left: 0%;
+    transform: none;
+    display: none;
+  }
+
+  .navbar-item {
+    width: 20%;
+    .nav__box__wrapper {
+      padding: 0px calc(100% * 0.2 * 0.5 - 48px);
+
+      .nav__icon .has__sessions {
+        .red__wrapper {
+          .dot__red {
+            top: 49%;
+
+            &.count {
+              left: 32.5% !important;
+              top: -10% !important;
+            }
+
+            &.blaze {
+              left: 65% !important;
+            }
+          }
+        }
+        top: 10px !important;
+        right: -18% !important;
+      }
+    }
+  }
+  .navbar-item:hover {
+    background: var(--color-focus);
+    color: var(--color-highlight);
+  }
+}
+
+#home__tooltip {
+  font-size: 2rem;
+}

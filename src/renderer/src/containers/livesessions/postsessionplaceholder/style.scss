@@ -1,0 +1,56 @@
+.postsession__placeholder {
+  //min-height: 505px;
+  width: 100%;
+  aspect-ratio: 1.78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 720px) {
+    //min-height: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    img {
+      padding-top: 3rem !important;
+      margin-bottom: 0rem !important;
+      width: 35% !important;
+    }
+
+    .placeholder__content {
+      margin-top: 0px !important;
+      h2 {
+        font-size: 12px !important;
+      }
+    }
+    min-height: calc(100vw * 0.5625);
+    max-height: calc(100vw * 0.5625);
+  }
+
+  .placeholder__logo {
+    padding-top: 3rem;
+    margin-bottom: -2rem;
+    width: 25%;
+  }
+
+  .placeholder__content {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    transform: scale(1.25);
+    h2 {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+    .countdown__placeholder {
+      font-size: 1.5rem;
+      display: flex;
+      font-weight: 500;
+      > div {
+        margin: 0 0.25rem;
+      }
+    }
+  }
+}

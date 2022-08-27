@@ -1,0 +1,147 @@
+.blaze__card {
+  max-width: calc(344px - 1rem);
+  min-width: calc(344px - 1rem);
+  margin: 0.5rem 0.5rem;
+  position: relative;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.185), 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 180px;
+  height: 180px;
+  
+
+  @media screen and (max-width: 500px) {
+    max-width: calc(100vw - 1rem);
+    min-width: calc(100vw - 1rem);
+    max-height: 190px;
+    height: 190px;
+    transform: scale(0.95);
+    .blaze__card__image,
+    .blaze__hero__overlay {
+      height: 190px;
+    }
+  }
+
+  .blaze__card__hero {
+    max-width: 100% !important;
+    min-width: 100%;
+    position: relative;
+
+    .blaze__card__image {
+      max-width: 100% !important;
+      min-width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .blaze__hero__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: linear-gradient(
+        rgba(240, 213, 204, 0) 0%,
+        rgb(168, 149, 142) 80%
+      );
+
+      filter: brightness(1) saturate(3);
+    }
+  }
+
+  .blaze__card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .blaze__session__head__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .blaze__session__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .blaze__faculty__image__wrapper {
+      position: relative;
+      span {
+        // background: var(--color-highlight);
+
+        color: var(--color-highlight);
+        font-size: 3.25rem;
+        position: absolute;
+        top: -2.15rem;
+        right: -0.35rem;
+      }
+    }
+
+    .blaze__faculty__image {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.75);
+    }
+
+    .blaze__session__schedule {
+      display: flex;
+      justify-content: space-between;
+
+      .blaze__session__detail1,
+      .blaze__session__detail2 {
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 11px;
+        }
+      }
+
+      .blaze__session__time p {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.session__completed {
+  filter: grayscale(0.7) brightness(0.85);
+}
+
+.session__not__selected {
+  transform: scale(0.95);
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1);
+    transition: all 0.25s ease-in;
+  }
+}
+
+.blaze__session__calendar {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  vertical-align: -0.1rem;
+}
+
+.blaze__session__clock {
+  width: 20px;
+  height: 20px;
+  margin-right: 0rem;
+  vertical-align: -0.25rem;
+}

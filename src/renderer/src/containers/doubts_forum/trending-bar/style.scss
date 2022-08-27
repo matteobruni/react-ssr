@@ -1,0 +1,48 @@
+@import "../../../styles/variables.scss";
+
+@media only screen and (max-width: 1300px) {
+  .doubt-page-rightbar {
+    display: none;
+  }
+  .trending-bar {
+    display: none;
+  }
+}
+
+.trending-bar {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 100;
+  margin-right: 1vw;
+  max-width: $right-bar-width;
+}
+
+.trendingbar-heading {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.trending-bar-askabout {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #939598;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.trending-bar-askabout:hover {
+  text-decoration: underline;
+}
+
+.trending-bar-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+
+  >img{
+    filter: var(--filter-icons);
+  }
+}

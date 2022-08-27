@@ -1,0 +1,18 @@
+.shimmer__title {
+  font-size: 22px !important;
+  margin: 16px;
+  font-weight: 700;
+  width: 344px;
+  animation: flowingText 8s linear both infinite;
+  background: linear-gradient(to left, #ff512f 5%, #dd2476 50%, #ff512f 95%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  margin-bottom: -15px !important;
+
+  @media only screen and (max-width: 430px) {
+    font-size: 18px !important;
+  }
+}

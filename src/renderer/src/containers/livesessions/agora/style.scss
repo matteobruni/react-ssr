@@ -1,0 +1,216 @@
+#agora5 {
+  padding: 12px;
+  height: calc(100vh - 28px - var(--header-height)) !important;
+  .layout {
+    height: calc(100vh - 28px - var(--header-height)) !important;
+    background: var(--color-primary) !important;
+
+    .layout-row {
+      border: 1px solid rgba(128, 128, 128, 0.15);
+    }
+    .layout-content {
+      .pin-right {
+        left: 25px;
+      }
+    }
+
+    .toolbar {
+      display: none;
+    }
+
+    .layout-aside {
+      border-left: 1px solid rgba(128, 128, 128, 0.15);
+      border-right: 1px solid rgba(128, 128, 128, 0.15);
+    }
+
+    .video-player {
+      border: none;
+    }
+
+    .tabs {
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 4px;
+      background: var(--color-primary);
+    }
+
+    .tabs-nav-list {
+      margin-left: 15px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .tabs-nav::before {
+      border: none;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.25) !important;
+      border-radius: 0;
+    }
+
+    .tab-title {
+      color: var(--color-text);
+    }
+    .tabs-tab {
+      display: none;
+
+      &.tabs-tab-active {
+        display: block;
+        cursor: initial;
+        user-select: none;
+      }
+    }
+
+    .tabs-ink-bar {
+      display: none;
+    }
+
+    .chat-panel {
+      border: none !important;
+    }
+
+    .biz-header {
+      background: var(--color-primary);
+      border: 1px solid rgba(128, 128, 128, 0.15) !important;
+
+      .biz-header-title {
+        color: var(--color-text);
+      }
+    }
+
+    .whiteboard {
+      border: 1px solid rgba(128, 128, 128, 0.25) !important;
+      border: none !important;
+      border-radius: 0;
+      background: var(--color-primary) !important;
+
+      .netless-whiteboard {
+        background: var(--color-primary) !important;
+      }
+    }
+  }
+
+  .header-actions .iconfont {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .fixed-container {
+    height: calc(100vh - 28px - var(--header-height)) !important;
+    width: calc(100% - 400px);
+  }
+
+  .camera-placeholder::before {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2) !important;
+  }
+
+  .bottom-left-info {
+    bottom: 4px;
+
+    .username {
+      margin-bottom: 3px;
+      text-transform: capitalize;
+      color: var(--color-text);
+      text-shadow: none;
+      opacity: 0.65;
+    }
+  }
+
+  .chat-texting {
+    background: var(--color-base);
+    border: 1px solid rgba(128, 128, 128, 0.4) !important;
+
+    .chat-texting-message {
+      color: var(--color-text);
+    }
+  }
+
+  .chat-history {
+    overflow-y: auto;
+    background: var(--color-primary);
+
+    .placeholder {
+      background: transparent !important;
+
+      img {
+        display: none;
+      }
+    }
+
+    .chat-message {
+      flex-direction: row;
+      margin-top: 0px;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+
+      .chat-message-right,
+      .chat-message-left {
+        align-items: flex-start;
+        flex-direction: row;
+
+        .chat-message-username {
+          color: green;
+          font-size: 14px;
+          font-weight: 600;
+          white-space: nowrap !important;
+          max-width: 100% !important;
+          overflow: visible;
+          text-transform: capitalize;
+          &::after {
+            content: ":";
+            margin-left: -4px;
+          }
+        }
+
+        .chat-message-content {
+          margin-left: 5px !important;
+          background: transparent !important;
+          color: var(--color-text);
+          padding: 0;
+          margin: 0;
+          font-size: 14px;
+          border: none;
+          word-break: break-all;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-thumb:horizontal {
+      width: 8px;
+      border-radius: 12.5px;
+      background: rgba(160, 160, 160, 0.75);
+    }
+
+    mask-image: linear-gradient(to top, transparent, rgb(122, 122, 122)),
+      linear-gradient(to left, transparent 8px, rgb(122, 122, 122) 8px);
+    mask-size: 100% 20000px;
+    mask-position: left bottom;
+    -webkit-mask-image: linear-gradient(to top, transparent, rgb(122, 122, 122)),
+      linear-gradient(to left, transparent 8px, rgb(122, 122, 122) 8px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.125s, -webkit-mask-position 0.125s;
+
+    &:hover {
+      mask-position: top left;
+      -webkit-mask-position: left top;
+    }
+  }
+
+  .btn-primary {
+    background-color: rgba(53, 123, 246, var(--tw-bg-opacity)) !important;
+  }
+
+  .btn-primary:hover {
+    background-color: rgba(53, 123, 246, 0.75) !important;
+  }
+}

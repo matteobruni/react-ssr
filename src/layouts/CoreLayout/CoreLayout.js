@@ -1,0 +1,25 @@
+import React, { Component } from "react"
+import { Helmet } from "react-helmet-async"
+
+import renderRoutes from "../../routes"
+
+import "./CoreLayout.css"
+
+class CoreLayout extends Component {
+  render() {
+    return (
+      <>
+        <Helmet>
+          <title>React App</title>
+          <meta name="title" content="React App" />
+          <meta name="description" content="React App" />
+          <meta property="og:title" content="React App" />
+          <meta property="og:description" content="React App" />
+        </Helmet>
+        <div className="core-layout__viewport">{renderRoutes()}</div>
+      </>
+    )
+  }
+}
+
+export default CoreLayout

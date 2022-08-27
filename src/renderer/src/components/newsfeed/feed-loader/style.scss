@@ -1,0 +1,14 @@
+@import "../../../styles/variables.scss";
+
+.newsfeed-post {
+  max-width: $doubt-tile-width;
+  @media only screen and (max-width: 720px) {
+    width: 100%;
+  }
+
+  margin-bottom: 12px;
+  border-radius: 4px;
+  background: var(--color-primary);
+  border: 1px solid var(--shadow-color);
+  z-index: 50;
+}

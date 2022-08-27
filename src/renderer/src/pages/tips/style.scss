@@ -1,0 +1,164 @@
+.classroom__screen__wrapper {
+  overflow: hidden !important;
+  height: 100vh;
+  background: #161616;
+}
+
+.classroom__screen {
+  margin-top: var(--header-height);
+
+  display: flex;
+  width: 100%;
+
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin-top: 0;
+  }
+
+  .classroom__content {
+    flex: 3;
+    background: #161616;
+    height: 100%;
+    position: relative;
+
+    @media only screen and (max-width: 980px) {
+      flex: 0;
+      width: 100%;
+    }
+
+    .back__library {
+      position: absolute;
+      z-index: 5;
+      top: 0.75rem;
+      margin-left: 0.725rem;
+      overflow: hidden !important;
+      border-radius: 20px;
+
+      a {
+        border-radius: 8px;
+        text-decoration: none;
+        overflow: hidden !important;
+        width: 100%;
+        border-radius: 50px;
+
+        svg {
+          position: relative;
+          font-size: 2.5rem;
+          vertical-align: -0.5rem;
+          color: white;
+          background: rgb(0, 0, 0);
+          border-radius: 50px;
+          padding: 4px 3px 4px 1px;
+          z-index: 55;
+          margin: 0px;
+        }
+
+        span {
+          color: white;
+          font-weight: 700;
+          visibility: hidden;
+          border-radius: 25px;
+          display: inline-block;
+          text-decoration: none;
+          vertical-align: 0.42rem;
+          padding: 9px 15px 11px 45px;
+          transform: translateX(-225px);
+          background: rgba(0, 0, 0, 1);
+          transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+          transition: all 0.125s ease-in-out;
+
+          span {
+            visibility: visible;
+            background: rgba(0, 0, 0, 0.7);
+            transform: translateX(-40px);
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        width: 50px;
+        max-height: 40px;
+        margin-left: 0.5rem;
+        margin-top: -0.25rem;
+
+        a {
+         max-width: 50px;
+         max-height: 50px;
+         display: block;
+        }
+        a > svg {
+          background: transparent;
+        }
+      }
+    }
+
+    .classroom__details__wrap {
+      padding: 0.85rem 0.75rem;
+      // box-shadow: var(--shadow-sidebar);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-text);
+      background: #161616;
+
+      .classroom__details__subheading {
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(197, 197, 197);
+        font-size: 0.925rem;
+
+        div {
+          padding-top: 2px;
+          font-weight: 500;
+          font-size: 1.1rem;
+          color: white;
+        }
+      }
+
+      .classroom__details__heading {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+
+      .classroom__actions {
+        a {
+          text-decoration: none;
+        }
+        button {
+          color: white;
+          width: 32px;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          // border: 1px solid rgba(245, 245, 245, 0.548);
+
+          // .MuiButton-label {
+          //   .MuiButton-startIcon {
+          //     img {
+          //       filter: var(--filter-icons);
+          //     }
+          //   }
+          // }
+        }
+      }
+
+      @media screen and (max-width: 430px) {
+        padding: 0.25rem 0.75rem;
+        min-height: 3.5rem;
+      }
+    }
+  }
+}
+
+.classroom__topbar {
+  canvas {
+    position: relative !important;
+  }
+}

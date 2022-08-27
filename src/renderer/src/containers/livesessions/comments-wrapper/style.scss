@@ -1,0 +1,37 @@
+.comments__placeholder {
+  //position: absolute;
+  //top: 40%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  margin: 0 auto;
+  div {
+    width: 120px !important;
+    height: 120px;
+  }
+  cursor: none !important;
+
+  h5 {
+    color: var(--color-text);
+    white-space: nowrap;
+    line-height: 20px;
+    animation: fadeIn 0.25s ease both;
+    text-align: center;
+
+    @media screen and (max-width: 900px) {
+      white-space: normal;
+      color: white;
+      //width: 80vw;
+    }
+  }
+}
+
+.live__comment__shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.lastCommentRef {
+  min-height: 5px;
+}

@@ -1,0 +1,38 @@
+.lecture-search-tile {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 13px 16px;
+  margin-bottom: 12px;
+
+  .lecture-details {
+    color: var(--color-text);
+    font-weight: 400;
+    font-size: 13px;
+    padding-bottom: 2.5px;
+  }
+
+  .lecture-title {
+    padding: 12.5px 0 0px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h6 {
+      color: var(--color-text);
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      margin-right: 7.5px;
+    }
+
+    .notes__svg {
+      width: 25px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.newsfed-page-container {
+  display: flex;
+  min-height: calc(100vh - var(--header-height));
+  background: var(--color-base);
+  width: 100%;
+  padding-top: 0px;
+
+  @media only screen and (min-width: 1200px) {
+    .doubt-page {
+      justify-content: flex-start;
+      margin-left: 344px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .MuiDrawer-paper {
+    z-index: 100;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .newsfed-page-container {
+    padding-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .newsfed-page-container {
+    padding-top: 8px;
+    padding-bottom: 60px;
+  }
+}

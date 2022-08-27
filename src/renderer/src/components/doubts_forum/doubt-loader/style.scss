@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.doubt__loader {
+  background-color: var(--color-primary);
+  margin-bottom: 12px;
+  border-radius: 4px;
+  min-height: 300px;
+  min-width: 200px;
+  max-width: $doubt-tile-width;
+  width: 100%;
+  border: none;
+  box-sizing: content-box;
+}

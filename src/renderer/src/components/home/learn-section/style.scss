@@ -1,0 +1,178 @@
+.learn-section-wrapper {
+  margin-top: 1rem;
+  .section-title {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    animation: flowingText 8s linear both infinite;
+    background: var(--title-gradient);
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subject-row {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 19px;
+    width: 100%;
+
+    .sub-tile-wrapper {
+      width: 21.5%;
+      transition: all 0.25s ease;
+
+      h6 {
+        color: var(--color-text);
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: 3px;
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0.9;
+        height: 20px;
+        animation: fadeIn 0.25s ease;
+      }
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+          .sub-tile {
+            //min-height: 115px;
+          }
+        }
+      }
+
+      .sub-tile {
+        position: relative;
+        border-radius: 15px;
+        width: 100%;
+        aspect-ratio: 1.5;
+
+        .sub-bg {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+
+        .sub-icon {
+          height: 55%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          animation: fadeIn 0.25s ease;
+
+          &.loading {
+            width: 125%;
+            height: auto;
+            opacity: 0.5;
+            animation: fadeIn2 0.25s ease;
+          }
+        }
+
+        &.maths {
+          background: linear-gradient(to top, #fb8b23, #ffdd00);
+        }
+        &.physics {
+          background: linear-gradient(to top, #ed82c1, #f9c6d7);
+        }
+        &.chemistry {
+          background: linear-gradient(to top, #ff571f, #ff8a5c);
+        }
+        &.biology {
+          background: linear-gradient(to top, #0ac2a6, #51f6f0);
+        }
+        &.history {
+          background: linear-gradient(to top, #999cff, #99c3ff);
+        }
+        &.civics {
+          background: linear-gradient(to top, #85c445, #c3db9f);
+        }
+        &.geography {
+          background: linear-gradient(to top, #ff7f5c, #ffc5ad);
+        }
+        &.economics {
+          background: linear-gradient(to top, #efbd81, #f6e8a2);
+        }
+        &.literature {
+          background: linear-gradient(to top, #ff4b33, #f78978);
+          .sub-icon {
+            transform: scaleX(-1) translate(50%, -50%);
+          }
+        }
+        &.writing {
+          background: linear-gradient(to top, #00b899, #58e0bb);
+        }
+        &.grammar {
+          background: linear-gradient(to top, #de85ff, #f3c2ff);
+        }
+        &.reading {
+          background: linear-gradient(to top, #e9275b, #f07f8c);
+        }
+
+        @media screen and (max-width: 1023px) {
+          background: none !important;
+          aspect-ratio: 1.4;
+
+          .sub-bg {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 501px) {
+  .learn-section-wrapper {
+    .subject-row {
+      .sub-tile-wrapper {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .learn-section-wrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      padding-left: 5px;
+      margin-bottom: 15px;
+    }
+
+    .subject-row {
+      width: 100%;
+      .sub-tile-wrapper {
+        width: 25%;
+        h6 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}

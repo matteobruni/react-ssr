@@ -1,0 +1,101 @@
+@import "../../../../styles/variables.scss";
+
+.similar-chapter-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.doubt-page-similar-chapter-icon {
+  height: 25px;
+  width: 25px;
+  margin-left: 7px;
+}
+
+.paddle {
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.left-paddle {
+  left: -7.5px;
+  width: 30px;
+  height: 32px;
+  background-color: #f7f7f8 !important;
+  border: 1px solid #a0a3a5;
+  margin-bottom: 16px;
+  background-color: lightgray;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  z-index: 10;
+  cursor: pointer;
+  transform: rotate(180deg);
+  position: absolute;
+  svg {
+    margin-bottom: 1px;
+  }
+}
+.right-paddle {
+  right: 0px;
+  width: 30px;
+  height: 32px;
+  z-index: 10;
+  background-color: #f7f7f8 !important;
+  border: 1px solid #a0a3a5;
+  margin-bottom: 16px;
+  background-color: lightgray;
+  padding: 10px 0px;
+  margin-left: -17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+
+  svg {
+    margin-top: -1px;
+  }
+}
+.hidden {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: $doubt-tile-width;
+  background-color: var(--color-primary);
+  // overflow-x: hidden;
+  position: relative;
+
+  ::-webkit-scrollbar {
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+}
+
+.similar-chapter-menu {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 0px;
+  scroll-behavior: smooth;
+  transition: all linear 125ms;
+  -webkit-overflow-scrolling: touch;
+}

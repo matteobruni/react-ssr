@@ -1,0 +1,315 @@
+@media screen and (max-width: 500px) {
+  .filter__categories {
+    width: 100vw;
+    background-color: var(--color-primary);
+    padding: 0px;
+    padding-bottom: 8px;
+    margin-top: -24px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.1),
+      0px 1px 5px 0 rgba(0, 0, 0, 0.05);
+
+    .filter__icon {
+      width: 32px;
+      height: 32px;
+      img {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 50%;
+        top: 54%;
+        transform: translate(-50%, -50%);
+        filter: var(--search-icon-filter);
+      }
+
+      position: absolute;
+      right: 4rem;
+      top: 0.85rem;
+      z-index: 500;
+      background-color: var(--search-bg);
+      border-radius: 50%;
+    }
+
+    .categoriesRow {
+      a button .categoryTile p {
+        font-size: 12px !important;
+      }
+      .btn-not-selected {
+        filter: opacity(0.7);
+      }
+
+      .selected p {
+        color: var(--color-highlight);
+      }
+    }
+
+    .categoryTile {
+      &:hover {
+        background: transparent !important;
+      }
+
+      &.selected {
+        background-color: transparent !important;
+
+        transform: scale(1.15);
+      }
+    }
+
+    .subjectsChips {
+      display: flex;
+      overflow: hidden;
+      overflow-x: scroll;
+      padding: 0px 10px !important;
+      scroll-behavior: smooth;
+
+      .customChip {
+        display: flex;
+        vertical-align: middle;
+        background: rgb(228, 230, 235);
+        color: rgb(19, 19, 19);
+        font-weight: 400;
+        svg {
+          margin-top: -3px;
+        }
+
+        &:hover {
+          background: rgb(228, 230, 235);
+        }
+
+        &.customChipDark {
+          background: rgb(19, 19, 19) !important;
+          color: rgb(239, 239, 239);
+
+          &:hover {
+            background: rgb(19, 19, 19);
+          }
+        }
+
+        &.selected {
+          background: linear-gradient(to left, #9ce85e, #1fbfff) !important;
+          color: white;
+        }
+      }
+
+      &::-webkit-scrollbar {
+        width: 0px !important;
+        height: 0px !important;
+        display: none !important;
+        background: transparent !important;
+      }
+
+      -ms-overflow-style: none;
+    }
+  }
+
+  .sortAndFilter {
+    .MuiPaper-root {
+      border-radius: 22.5px 22.5px 0 0;
+      padding: 10px 15px 15px 15px;
+      .sortAndFilterHead {
+        margin-bottom: 10px;
+        h6 {
+          color: rgb(0, 158, 0);
+          position: absolute;
+          left: 15px;
+          top: 10px;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        h1 {
+          text-align: center;
+          font-weight: 500;
+          font-size: 1.3rem;
+        }
+        svg {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 1.6rem;
+          color: lightgrey;
+        }
+      }
+
+      .answerStatus {
+        h2 {
+          text-align: left;
+          font-weight: 500;
+          font-size: 1.15rem;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          button {
+            border: none;
+            outline: none;
+            margin: 10px;
+            border-radius: 25px;
+            width: 175px;
+            padding: 8px 0 9.5px 0;
+            font-weight: 600;
+            font-size: 1rem;
+          }
+
+          .selected {
+            background: var(--color-highlight);
+            color: white;
+          }
+
+          .not-selected {
+            color: black;
+          }
+        }
+      }
+
+      .sort {
+        margin-top: 10px;
+        h2 {
+          text-align: left;
+          font-weight: 500;
+          font-size: 1.15rem;
+          margin-bottom: 10px;
+        }
+        .sortItem {
+          display: flex;
+          padding: 10px 0;
+          position: relative;
+          img {
+            width: 24px;
+            margin-top: -0.15rem;
+          }
+
+          h4 {
+            margin-left: 12.5px;
+            font-weight: 500;
+          }
+
+          svg {
+            position: absolute;
+            right: 20px;
+            color: rgb(0, 158, 0);
+            top: 10px;
+          }
+        }
+      }
+
+      .applyButton {
+        margin-top: 10px;
+        background: var(--color-highlight);
+        border: none;
+        outline: none;
+        font-size: 1.15rem;
+        color: white;
+        border-radius: 25px;
+        width: 100%;
+        padding: 7.5px 0 10px 0;
+        font-weight: 600;
+      }
+    }
+
+    &.dark {
+      .MuiPaper-root {
+        background-color: #1b1b1b;
+
+        .sortAndFilterHead {
+          color: white;
+
+          h6 {
+            color: goldenrod;
+          }
+        }
+
+        .answerStatus {
+          h2 {
+            color: white;
+          }
+
+          div {
+            .not-selected {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+
+        .sort {
+          h2 {
+            color: white;
+          }
+
+          .sortItem {
+            h4 {
+              color: white;
+            }
+            svg {
+              color: goldenrod;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #filterbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 500;
+    display: none;
+
+    .filterbarInner {
+      height: 48px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.1),
+        0px 1px 5px 0 rgba(0, 0, 0, 0.05);
+
+      .filters {
+        padding-top: 15px;
+        text-align: center;
+        h6 {
+          font-size: 0.95rem;
+          font-weight: 400;
+          color: black;
+        }
+      }
+
+      .filter__icon {
+        background-color: var(--search-bg);
+        top: 7.5px;
+        left: 10px;
+      }
+
+      .search__icon {
+        position: absolute;
+        top: 7.5px;
+        right: 10px;
+        background-color: var(--search-bg);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+
+        img {
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          left: 50%;
+          top: 52%;
+          transform: translate(-50%, -50%);
+          filter: var(--search-icon-filter);
+        }
+      }
+
+      &.dark {
+        background-color: rgb(28, 28, 28);
+        box-shadow: 0px 1px 3px 0 rgba(255, 255, 255, 0.05),
+          0px 1px 3px 0 rgba(255, 255, 255, 0.05);
+        .filters {
+          h6 {
+            color: aliceblue;
+          }
+        }
+      }
+    }
+  }
+}

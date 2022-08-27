@@ -1,0 +1,26 @@
+.care-popup-bubble {
+  position: fixed;
+  right: 25px;
+  z-index: 800;
+  bottom: 75px;
+  width: 50px;
+
+  .care-popup-wrapper {
+    position: relative;
+    h6 {
+      background: rgb(0, 177, 0);
+      min-width: 12.5px;
+      min-height: 12.5px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 801;
+      right: 2.5px;
+    }
+    img {
+      width: 50px;
+      background-color: white;
+      padding: 1px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.about__page {
+  max-height: 100vh !important;
+  width: 100vw;
+  overflow: hidden;
+
+  .landing__section {
+    min-height: 100vh !important;
+    position: relative;
+    .landing__wrapper {
+      video {
+        position: absolute;
+        height: 120vh !important;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .desktop__overlay {
+        position: absolute;
+        background: linear-gradient(
+          45deg,
+          rgba(10, 33, 89, 0.7),
+          rgba(4, 4, 11, 0.7)
+        );
+        bottom: 0px;
+        opacity: 1;
+        top: 0px;
+        left: 0px;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+      }
+
+      .about__us__text {
+        position: absolute;
+        width: 52%;
+        top: 42.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // background: rgba(0, 0, 0, 0.6);
+        // backdrop-filter: blur(15px);
+        padding: 0px 25px;
+        padding-top: 25px;
+        border-radius: 15px;
+
+        h1 {
+          color: white;
+          text-align: center;
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: -10px;
+        }
+
+        p {
+          color: white;
+          margin: 25px 0;
+          font-size: 18px;
+          letter-spacing: 0.5px;
+          line-height: 26px;
+          text-align: justify;
+        }
+
+        @media screen and (max-width: 700px) {
+          width: 85%;
+          top: 50%;
+
+          p {
+            font-size: 15px;
+          }
+        }
+
+        @media screen and (max-width: 360px) {
+          width: 85%;
+          top: 50%;
+
+          p {
+            font-size: 12px;
+            text-align: left;
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .desktop__landing__footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    background: linear-gradient(to bottom, transparent, rgba(4, 4, 11, 0.7));
+
+    .final__footer {
+      display: flex;
+      opacity: 1;
+      padding: 20px 0;
+
+      @media screen and (max-width: 700px) {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+}

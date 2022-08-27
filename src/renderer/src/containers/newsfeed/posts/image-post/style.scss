@@ -1,0 +1,205 @@
+@import "../../../../styles/variables.scss";
+
+.post-image-container-bg {
+  width: 100%;
+  height: 400px;
+  filter: blur(5px) brightness(0.95);
+  border: none;
+}
+
+.post-image-container {
+  position: relative;
+  overflow: hidden;
+  .image-post-single {
+    .post-single-image-height {
+      top: 50%;
+      left: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      position: absolute;
+      margin: auto;
+      height: 400px;
+      cursor: pointer !important;
+      display: block;
+      user-select: none;
+    }
+
+    .post-single-image-width {
+      width: 100%;
+      cursor: pointer !important;
+    }
+  }
+
+  .image-post-grid {
+    max-height: 400px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0;
+    padding: 1px;
+    gap: 1px;
+    :nth-child(1) {
+      object-fit: cover;
+      max-height: 400px;
+    }
+    img {
+      width: 100%;
+      position: relative !important;
+      cursor: pointer !important;
+
+    }
+
+    .images-column {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 1px;
+
+      &.single {
+        flex-direction: row;
+        > img {
+          max-height: none;
+        }
+      }
+
+      > img {
+        max-height: 200px;
+        min-height: 200px;
+        object-fit: cover;
+      }
+
+      .left-images {
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        color: $light-color;
+        font-weight: 500;
+        font-size: 2.5em;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.ril__toolbar,
+.ril-toolbar {
+  background-color: transparent !important;
+
+  .ril-close {
+    display: none !important;
+  }
+}
+
+.ril__inner {
+  .ril__image {
+    // max-height: 70vh;
+    // width: 70vw;
+  }
+}
+
+.ril__navButtons {
+  top: 0;
+  border-radius: 50%;
+  width: 3rem !important;
+  height: 3rem !important;
+  padding: 1rem !important;
+  // padding: 40px 30px;
+  margin: auto 10px !important;
+  cursor: pointer;
+  background-size: 25% !important;
+  opacity: 0.8;
+  outline: none !important;
+  border: none !important;
+}
+.ril__outer {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px);
+}
+
+.imagesList {
+  z-index: 15000;
+  display: flex;
+  justify-content: space-between;
+  max-width: 90vw;
+  // width: 400px;
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  backdrop-filter: blur(3px);
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    width: 0px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-track:horizontal {
+    width: 0px;
+    height: 0px;
+  }
+
+  img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    margin: 7.5px;
+    cursor: pointer;
+    border: transparent 3px solid;
+    transition: transform 0.25s ease;
+  }
+
+  .selected {
+    border: rgb(71, 120, 211) 3px solid;
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+  }
+}
+
+.slideDown {
+  animation: slideDown ease-in-out 0.35s both;
+}
+
+.slideUp {
+  animation: slideUp ease-in-out 0.35s both;
+}
+
+.slideOut {
+  animation: slideOut ease-in-out 0.35s both;
+}
+
+.slideIn {
+  animation: slideIn ease-in-out 0.35s both;
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 25px;
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slideDown {
+  from {
+    bottom: 25px;
+    opacity: 1;
+  }
+  to {
+    bottom: -200px;
+    opacity: 0;
+  }
+}
+
+

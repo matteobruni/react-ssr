@@ -1,0 +1,69 @@
+.session__form__input {
+  position: relative;
+  margin-top: 20px;
+
+  input {
+    width: 100%;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    padding: 13px 25px;
+    border-radius: 200px;
+    color: var(--color-doubt-forum-header);
+    border: 1px solid var(--color-form-input-border);
+    box-shadow: 0 0 3px 1px var(--color-form-input-shadow);
+
+    &:focus {
+      border: 1px solid dodgerblue;
+      box-shadow: 0 0 3px 1px dodgerblue;
+      outline: none;
+    }
+
+    &.error {
+      border: 1px solid #ef0d0d;
+      box-shadow: 0 0 3px 1px #ef0d0d;
+
+      &:focus {
+        border: 1px solid dodgerblue;
+        box-shadow: 0 0 3px 1px dodgerblue;
+        outline: none;
+      }
+    }
+  }
+
+  &.dark {
+    input {
+      background-color: #0c0c0c;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    zoom: .8;
+
+    svg,
+    path {
+      fill: var(--color-text);
+      stroke: var(--color-text);
+    }
+  }
+
+  &__side-element {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    zoom: .8;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(var(--color-text-rgb), .65);
+    border-radius: .3em;
+    cursor: pointer;
+  }
+}
+
+.react-colorful {
+  //margin: 15px;
+}

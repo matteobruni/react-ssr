@@ -1,0 +1,29 @@
+.side-illustration {
+  position: fixed;
+  z-index: 200;
+  width: 22vw;
+  height: 450px;
+  left: 78vw;
+  bottom: 0;
+
+  div {
+    position: relative;
+    width: 10vw !important;
+    margin-top: -50px !important;
+    margin-left: 100px !important;
+    transform: rotate(-25deg);
+    opacity: 1;
+  }
+
+  .earth-img {
+    width: 14vw;
+    position: absolute;
+    bottom: -4.25vw;
+    right: -4.25vw;
+    opacity: 0.75;
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}

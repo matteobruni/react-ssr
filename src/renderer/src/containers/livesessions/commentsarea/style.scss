@@ -1,0 +1,270 @@
+#comments__card__wrapper {
+  min-height: 250px;
+
+  @media only screen and (max-width: 500px) {
+    background: url("../../../assets/images/comments-bg.png") no-repeat;
+    background-size: 100%;
+
+    padding: 0px;
+    .comments__area {
+      height: calc(66vh - calc(var(--header-height)));
+      background: transparent !important;
+
+      &.no__comments {
+        background: #00001a !important;
+      }
+      .comments__add {
+        .livesession__commentSection {
+          width: calc(100vw - 40px);
+          padding: 0;
+          padding-top: 10px;
+
+          .livesession__commentSectionInput {
+            border: 1px solid #282828;
+            color: rgb(224, 224, 224);
+            background: #c3c8e92f;
+          }
+        }
+      }
+
+      .comments__wrapper {
+        .comments__content {
+          .livesession__comment__wrapper {
+            .comment__details {
+              h2 {
+                font-weight: 500;
+                user-select: none;
+                color: white;
+              }
+              p {
+                color: white;
+                user-select: none;
+              }
+
+              h4 {
+                color: white;
+                user-select: none;
+              }
+            }
+            .comment__content {
+              border-radius: 15px;
+              padding: 0.75rem 1rem;
+              background-color: #c3c8e92f;
+
+              .comment {
+                color: rgb(255, 255, 255);
+              }
+            }
+          }
+
+          .livesession__reply__wrapper {
+            .comment__content {
+              .comment__text {
+                border-radius: 15px;
+                padding: 0.75rem 1rem;
+                background-color: #c3c8e92f;
+              }
+
+              .comment__details {
+                color: white;
+                h2 {
+                  font-weight: 500;
+                  user-select: none;
+                  color: white;
+                }
+                p {
+                  color: white;
+                  user-select: none;
+                }
+
+                h4 {
+                  color: white;
+                  user-select: none;
+                }
+              }
+
+              .comment__student {
+                background-color: #2c2c2c;
+                color: white;
+              }
+            }
+            .comment__reply {
+              .comment__details {
+                background-color: #c3c8e92f;
+                border-radius: 15px;
+                padding: 0.75rem 1rem;
+                color: white;
+
+                h2 {
+                  color: goldenrod;
+                  font-weight: 500;
+                  user-select: none;
+                }
+
+                p {
+                  color: lightgrey;
+                  user-select: none;
+                }
+
+                h4 {
+                  color: white;
+                  user-select: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 720px) {
+    width: 100%;
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+
+  @media only screen and (min-width: 720px) and (max-width: 1200px) {
+    //margin-left: 12px;
+    //width: calc(100% - 294px);
+    //height: 286px;
+  }
+
+  .comments__area {
+    background: var(--color-primary);
+    //margin: 0.75rem 20px 0 20px;
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.2),
+      1px 2px 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem 0.25rem 1rem;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px) {
+      //height: auto;
+    }
+
+    @media screen and (max-width: 720px) {
+      //margin: 0.5rem 0.65rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin: 0rem 0rem;
+      padding: 15px;
+      padding-top: 0px;
+      box-shadow: none;
+    }
+
+    .comments__header {
+      font-size: 1rem;
+      color: grey;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      .red__dot {
+        margin-left: 1rem;
+        width: 9px;
+        height: 9px;
+        background: red;
+        border-radius: 50px;
+      }
+
+      @media screen and (max-width: 500px) {
+        display: none !important;
+      }
+    }
+
+    .comments__wrapper {
+      display: flex;
+      flex-direction: column;
+      //min-height: 176px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin-top: 0.25rem;
+      scroll-behavior: smooth;
+      position: relative;
+      flex: 1 1 0;
+      flex-basis: 0;
+      -webkit-flex-basis: 0;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar-thumb:horizontal {
+        width: 6px;
+        border-radius: 15px;
+        background: rgba(160, 160, 160, 0.75);
+      }
+
+      @media screen and (max-width: 500px) {
+        //max-height: calc(100vh - calc(var(--header-height) + 58px + 72vw));
+        //min-height: calc(100vh - calc(var(--header-height) + 58px + 72vw));
+        margin-top: 5px;
+        padding-top: 0px;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+
+      @media only screen and (min-width: 500px) and (max-width: 720px) {
+        //height: calc(100vh - 180px - calc(100px + 292px));
+      }
+
+      @media screen and (min-width: 720px) and (max-width: 1200px) {
+        //height: calc(100vh - calc(600px + 192px));
+        //max-height: 168px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        //min-height: 120px;
+
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    26vw
+        //);
+      }
+
+      @media only screen and (min-width: 1200px) {
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    27vw
+        //);
+      }
+
+      @media only screen and (min-width: 1400px) {
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    25.5vw
+        //);
+      }
+
+      @media only screen and (min-width: 1600px) {
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    25vw
+        //);
+      }
+
+      @media only screen and (min-width: 1720px) {
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    24vw
+        //);
+      }
+
+      @media only screen and (min-width: 2000px) {
+        //height: calc(
+        //  100vh - calc(calc(calc(calc(100vw - 344px) * 0.083) * 6) * 0.5625) -
+        //    22vw
+        //);
+      }
+    }
+  }
+}

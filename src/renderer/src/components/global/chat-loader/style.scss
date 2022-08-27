@@ -1,0 +1,13 @@
+.chatLoader {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5px;
+  width: calc(100% - 4px);
+
+
+  .student {
+    margin-top: 90px;
+  }
+}

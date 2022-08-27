@@ -1,0 +1,120 @@
+.comments__add {
+  position: relative;
+  z-index: 10;
+}
+
+.replying__comment {
+  position: absolute;
+  top: -44px;
+  width: calc(100% + 15px);
+  backdrop-filter: blur(2.5px);
+  
+  .replying__comment__inner {
+    opacity: 0.65;
+    background: var(--color-primary);
+    padding: 10px 10px;
+    position: relative;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        color: var(--color-text);
+        font-size: 12.5px;
+      }
+
+      svg {
+        color: var(--color-text);
+        font-size: 18px;
+        opacity: 0.75;
+        cursor: pointer;
+      }
+    }
+    p {
+      color: var(--color-text);
+      opacity: 0.65;
+      font-size: 11px;
+      max-width: 360px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.livesession__commentSection {
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 1rem);
+  margin: 0rem 0.5rem;
+}
+
+.livesession__commentSectionInput {
+  flex: 1;
+  font-size: 15px;
+  color: var(--color-text);
+  border: 1px solid var(--color-textfield);
+  font-weight: 400;
+  border-radius: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: var(--color-textfield);
+  resize: none;
+  max-height: 48px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.livesession__commentSectionInput:focus {
+  outline: none;
+}
+
+.livesession__commentSectionButton {
+  font-weight: 550;
+  font-size: 13px;
+  line-height: 18px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: rgb(255, 255, 255);
+  border-radius: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  background: var(--color-highlight);
+
+  @media screen and (max-width: 500px) {
+    background: #bb281b;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: lightgrey;
+    color: grey;
+  }
+}
+
+.livesession__commentSectionButton:focus {
+  outline: none;
+}
+
+.blur__comments {
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.1);
+  backdrop-filter: blur(1px);
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}

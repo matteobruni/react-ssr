@@ -1,0 +1,52 @@
+@import "../../../../styles/variables.scss";
+
+.rich-text-post-container {
+  .something-went-wrong {
+    padding: 0.5rem 1rem;
+    text-align: center;
+
+    i {
+      color: var(--color-highlight);
+      font-size: 1.5em;
+    }
+
+    h3 {
+      color: var(--color-highlight);
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+}
+
+.quill {
+  .ql-container {
+
+    color: var(--color-text);
+
+    .ql-editor {
+      p {
+        font-size: 15px;
+      }
+
+      ul {
+        margin-top: 0.25rem;
+        font-size: 15px;
+
+        li::before {
+          content: "•";
+          margin-right: 0.5rem;
+        }
+      }
+      ol {
+        margin-top: 0.25rem;
+        font-size: 15px;
+        li::before {
+          margin-right: 0.5rem;
+        }
+      }
+      blockquote {
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.cwc-sidebar {
+  min-width: 320px;
+  max-width: 320px;
+  margin-top: 0px;
+  max-height: calc(100vh - 58px);
+  min-height: calc(100vh - 58px);
+  padding: 0px;
+  padding-left: 45px;
+  overflow: auto;
+  position: fixed;
+  right: 7%;
+
+  @media screen and (min-width: 2560px) {
+    right: 19.5%;
+  }
+
+  .cwc-head-wrapper {
+    position: fixed;
+    padding-top: 12px;
+
+    background: var(--color-base);
+    z-index: 100;
+    width: 320px;
+    .cwc-head {
+      font-weight: 700 !important;
+      padding-bottom: 0px;
+      padding-left: 5px;
+      font-size: 24px;
+      animation: flowingText 8s linear both infinite;
+      background: var(--title-gradient);
+      background-size: 200% auto;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .cwc-sidebar-inner {
+    position: relative;
+    padding-top: 52px;
+    .top-gradient {
+      min-width: 280px;
+      max-width: 280px;
+      position: fixed;
+      top: 94px;
+      z-index: 150;
+      height: 60px;
+      background: linear-gradient(
+        to bottom,
+        var(--color-base) 21%,
+        transparent
+      );
+      z-index: 99;
+      pointer-events: none;
+    }
+    .bottom-gradient {
+      min-width: 280px;
+      max-width: 280px;
+      position: fixed;
+      bottom: 0px;
+      z-index: 150;
+      height: 60px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--color-base) 80%
+      );
+      pointer-events: none;
+    }
+
+    .trending-video {
+      height: 190px;
+      // background: rgba(180, 180, 180, 0.1);
+      padding: 5px;
+      // border: 1px solid rgba(128, 128, 128, 0.5);
+      border-radius: 7.5px;
+      margin-bottom: 15px;
+
+      .youtube-player-wrapper {
+        margin-top: 0px !important;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .video__title {
+        padding-top: 7.5px;
+        color: var(--color-text);
+        white-space: nowrap;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.75;
+
+        svg {
+          font-size: 22px;
+          margin-right: 7.5px;
+          color: var(--color-highlight);
+          filter: brightness(1.25);
+          opacity: 1;
+          vertical-align: -0.2rem;
+        }
+      }
+    }
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .cwc-card-wrapper {
+    margin-bottom: 15px;
+    // background: rgba(180, 180, 180, 0.1);
+    padding: 5px;
+    // border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 7.5px;
+    transition: all 0.25s ease;
+
+    .cwc-lectures {
+      color: cornflowerblue;
+      margin-top: 5px;
+      display: none;
+      font-size: 13px;
+      transition: all ease 0.25s;
+    }
+
+    .cwc-subject-name {
+      color: var(--color-text);
+      display: none;
+      font-size: 14px;
+      font-weight: 300;
+      border: 1px solid var(--color-text);
+      padding: 2px 4px;
+      text-transform: capitalize;
+      transition: all ease 0.25s;
+    }
+
+    .cwc__card {
+      margin: 0px;
+      display: block;
+
+      .pustack__mark__overlay {
+        display: none;
+      }
+
+      .subject__thumbnail {
+        border: 2px solid rgba(180, 180, 180, 0.2);
+        max-height: 145px;
+        img.maths__thumbnail {
+          object-fit: contain !important;
+        }
+      }
+
+      .subject__title {
+        padding-top: 7.5px;
+        color: var(--color-text);
+        width: 100%;
+
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.75;
+        display: flex;
+
+        svg {
+          font-size: 22px;
+          margin-right: 7.5px;
+          color: var(--color-highlight);
+          filter: brightness(1.25);
+          opacity: 1;
+          vertical-align: -0.2rem;
+        }
+      }
+    }
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-track,
+  &::-webkit-slider-thumb {
+    width: 0px !important;
+  }
+
+  @media screen and (max-width: 1366px) {
+    display: none;
+  }
+}

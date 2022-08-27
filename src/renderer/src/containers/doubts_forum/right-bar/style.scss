@@ -1,0 +1,56 @@
+@import "../../../styles/variables.scss";
+
+@media only screen and (max-width: 600px) {
+  .right-bar {
+    width: 100%;
+    margin: 16px 16px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .right-bar {
+    max-width: $right-bar-width;
+  }
+}
+
+.right-bar-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rightbar-heading {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  // color: #282829;
+  color: var(--color-doubt-forum-header);
+}
+
+.rightbar-heading-tile {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  // color: #195faa;
+  color: var(--color-doubt-link);
+  margin-bottom: 12px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.rightbar-heading-tile:hover {
+  text-decoration: underline;
+}
+
+.right-bar-askabout {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #939598;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.right-bar-askabout:hover {
+  text-decoration: underline;
+}

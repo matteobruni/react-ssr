@@ -1,0 +1,257 @@
+.embla {
+  position: relative;
+  aspect-ratio: 2.6;
+  overflow: hidden;
+  @media only screen and (max-width: 500px) {
+    margin: 0 1.75%;
+  }
+  border-radius: 15px;
+
+  .embla__viewport {
+    border-radius: 15px;
+  }
+
+  .embla__slide {
+    .embla__slide__inner {
+      .embala__slide__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        cursor: pointer;
+
+        .embla__slide__background__img {
+          display: block;
+          filter: blur(32px);
+          aspect-ratio: 2.6;
+          @media only screen and (max-width: 720px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .embla__slide__img__wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2.6;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+
+    .embla__slide__img {
+      width: 100%;
+      aspect-ratio: 2.6;
+      margin: 0 auto;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .embla__button {
+    outline: 0;
+    cursor: pointer;
+    touch-action: manipulation;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    border: 0;
+    width: 108px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    &:disabled {
+      opacity: 0;
+      cursor: default;
+    }
+
+    @media only screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+
+  .embla__button__svg {
+    width: 100%;
+    fill: white;
+    height: 100%;
+    display: block;
+    z-index: 9999 !important;
+  }
+
+  .embla__button--prev {
+    padding-right: 5rem;
+    left: 0;
+    transition: all ease-in-out 250ms;
+    z-index: 1;
+
+    &:hover {
+      padding-right: 4.7rem;
+      transition: all ease-in-out 250ms;
+      .embla__button--prev--inner {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+    }
+  }
+
+  .embla__button--prev--inner {
+    position: absolute;
+    width: 108px;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    z-index: -1;
+    border-radius: 15px 0 0 15px;
+
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.15) 40%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.25s ease;
+    }
+  }
+
+  .embla__button--next {
+    padding-left: 4.5rem;
+    right: 0;
+
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      padding-left: 4.1rem;
+      transition: all ease-in-out 250ms;
+      .embla__button--next--inner {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+    }
+    .embla__button--next--inner {
+      position: absolute;
+      width: 92px;
+      top: 0;
+      right: 0px;
+      height: 100%;
+      z-index: -1;
+      border-radius: 0 15px 15px 0;
+
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.15) 40%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      opacity: 0;
+      transition: opacity 0.25s ease;
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+    }
+  }
+
+  .embla__dots {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  .embla__dot {
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .embla__dot:after {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    content: "";
+    transition: all 0.25s ease;
+  }
+
+  .embla__dot.is-selected:after {
+    background-color: #ffffff;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    transition: all 0.25s ease;
+  }
+}
+
+.carousel-video-modal {
+  z-index: 50000;
+  height: 100%;
+  width: 0;
+  outline: none;
+  border: none;
+
+  @media screen and (max-width: 500px) {
+    width: 0%;
+  }
+
+  .youtube-modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .modal-close-icon {
+      position: absolute;
+      z-index: 1000000;
+      top: -0.75rem;
+      right: -0.75rem;
+      cursor: pointer;
+      svg {
+        color: rgb(223, 223, 223);
+        font-size: 1.5rem;
+        background-color: rgb(139, 139, 139);
+        border-radius: 50%;
+      }
+    }
+    .youtube-player-wrapper {
+      margin: auto !important;
+      width: 82.5vw;
+    }
+  }
+}
+
+.carousel-video-modal-overlay {
+  z-index: 1290;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+}

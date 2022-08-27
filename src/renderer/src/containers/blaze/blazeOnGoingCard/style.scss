@@ -1,0 +1,154 @@
+.ongoing-card {
+  height: 86px;
+  border-radius: 12.5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+  border: 2.5px solid rgba(136, 136, 136, 0.15);
+
+  .ongoing-card-bg {
+    background: var(--blaze-card-bg);
+    background-size: 100%;
+    background-position: center;
+    height: 86px;
+    width: 200px;
+    padding: 0;
+    border-radius: 12.5px;
+    filter: var(--blaze-card-filter);
+    position: absolute;
+  }
+
+  .card-content {
+    display: flex;
+    margin-top: 10px;
+
+    .card-neon-line {
+      width: 3px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    .card-unread_count {
+      width: 18px;
+      height: 18px;
+      background-color: red;
+      margin-right: 8px;
+      flex-shrink: 0;
+      color: white;
+      font-size: 12px;
+      border-radius: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-text);
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .card-divider {
+    background: rgba(128, 128, 128, 0.15);
+    min-height: 2px;
+    max-height: 2px;
+    width: 100%;
+  }
+
+  .student-details {
+    padding: 5px 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .student-inner {
+      display: flex;
+      align-items: center;
+
+      .student-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+                        to right,
+                        rgb(243, 184, 57) 0%,
+                        rgb(190, 65, 7) 50%,
+                        rgb(243, 184, 57) 100%
+        );
+        background-size: 200% auto;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        position: relative;
+
+        .image__student {
+          width: 28px;
+          height: 28px;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 50%;
+        }
+      }
+
+      section {
+        padding-left: 7.5px;
+        div {
+          display: flex !important;
+          justify-content: space-between;
+          align-items: center;
+          h4 {
+            font-size: 12px;
+            color: var(--color-text);
+            opacity: 0.75;
+            font-weight: 500;
+            text-shadow: 0 0 2.5px rgba(128, 128, 128, 0.411);
+            white-space: nowrap;
+          }
+        }
+
+        h6 {
+          font-size: 11px;
+          color: var(--color-text);
+          opacity: 0.5;
+          font-weight: 500;
+          padding-top: 2.5px;
+          text-transform: capitalize;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 120px;
+        }
+      }
+    }
+
+    button {
+      color: var(--color-text);
+      border-radius: 50%;
+      background: var(--color-primary) !important;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+
+      align-items: center;
+      opacity: 0.8;
+      box-shadow: 1px 0.5px 1px 1px rgba(128, 128, 128, 0.25);
+
+      svg {
+        font-size: 24px;
+        margin-left: 2px;
+        opacity: 0.6;
+        color: var(--color-text);
+      }
+    }
+  }
+}

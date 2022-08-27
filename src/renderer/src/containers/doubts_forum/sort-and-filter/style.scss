@@ -1,0 +1,262 @@
+.sortAndFilter__top {
+  padding: 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog__button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  padding-right: 12px;
+}
+
+.dialog__button:focus {
+  outline: none;
+}
+
+.sortAndFilter__middle {
+  padding: 10px 6px;
+}
+
+.sortAndFilter__middleAnswerStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__selection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.askDoubtPopup__chip {
+  background-color: brown;
+  border: none;
+  padding: 10px 16px;
+  color: var(--color-text);
+  border-radius: 23px;
+}
+
+.askDoubtPopup__chip:focus {
+  outline: none;
+}
+
+.sortAndFilter__middleListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  margin: 0px 4px;
+  padding-left: 10px;
+  border-radius: 8px;
+  color: #050505;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--color-text);
+
+  .MuiSvgIcon-root {
+    fill: rgb(128, 128, 128);
+  }
+
+  .PrivateRadioButtonIcon-layer-10 {
+    path {
+      fill: #9e1313 !important;
+    }
+  }
+}
+
+.sortAndFilter__middleListItem:hover {
+  background-color: var(--color-doubt-sidebar-bar-hover);
+}
+
+.sortAndFilter__middleListItem__dark {
+  .MuiSvgIcon-root {
+    fill: rgb(196, 196, 196);
+  }
+  .PrivateRadioButtonIcon-layer-10 {
+    path {
+      fill: #e63323 !important;
+    }
+  }
+}
+
+.sortAndFilter__SortList {
+  display: flex;
+  flex-direction: column;
+}
+
+.sortAndFilter__SortList__TopBar {
+  padding: 10px 10px;
+  margin: 0px 4px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sortAndFilter__SortList__TopBar:hover {
+  background-color: var(--color-doubt-sidebar-bar-hover);
+}
+
+.sortAndFilter__middleListItem__dark:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sortAndFilter__SortList__TopBar__dark:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.askDoubtPopup__button {
+  border: none;
+  background-color: var(--color-primary);
+}
+
+.askDoubtPopup__button:focus {
+  outline: none;
+}
+
+.hr {
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.noTextSelection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.slider__btn {
+  flex: 0.5;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* 🚧 Slider 🚧 */
+
+body {
+  background-color: var(--color-primary);
+}
+
+.tabs {
+  width: fit-content;
+  padding: 4.5px 4px !important;
+  border-radius: 8px;
+  background: var(--color-doubt-toggle);
+  margin: 8px !important;
+  position: relative;
+  display: block;
+  line-height: 1.15 !important;
+}
+
+.tabs__label {
+  z-index: 9999 !important;
+  position: relative;
+  font-size: 16px;
+}
+
+.tabs__label,
+#slider,
+#sliderdark {
+  outline: none;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text);
+  width: 150px;
+  height: auto;
+  padding: 11px 0px 12px 0px;
+}
+
+label:hover {
+  cursor: pointer;
+  transition: all 0.125s ease;
+}
+
+.tabs [type="radio"] {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  border-radius: 8px;
+  background: var(--color-primary);
+  padding: 20px;
+  box-shadow: inset 0px 5px 5px -5px;
+  display: none;
+}
+
+#slider {
+  outline: none;
+  border-radius: 8px;
+  background-color: #891010;
+  color: white;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all ease-in-out 0.5s;
+  width: 145px;
+  z-index: 0;
+  cursor: pointer;
+
+  &.hasbeenanswered {
+    left: 7px;
+  }
+
+  &.unanswered {
+    left: 157px;
+  }
+}
+#sliderDark {
+  outline: none;
+  border-radius: 8px;
+  background-color: #bb281b;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all ease-in-out 0.5s;
+  width: 145px;
+  z-index: 0;
+  cursor: pointer;
+
+  &.hasbeenanswered {
+    left: 7px;
+  }
+
+  &.unanswered {
+    left: 157px;
+  }
+}
+[type="radio"],
+#r1:checked {
+  background: black;
+  width: 200px;
+  height: 100px;
+  z-index: 1000;
+}
+
+[type="radio"],
+#r2:checked {
+  background: black;
+  width: 200px;
+  height: 100px;
+  z-index: 1000;
+}
+
+[type="radio"]:checked + label {
+  color: #891011;
+}
+
+[type="radio"]:checked + label + .content {
+  display: inline-block;
+}

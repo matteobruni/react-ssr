@@ -1,0 +1,197 @@
+.blaze__call__wrapper {
+  position: absolute;
+  z-index: 999999999;
+  left: 0%;
+  top: 0%;
+  height: 100vh;
+  width: 100vw;
+
+  .blaze__call__backdrop {
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .blaze__call__inner__wrapper {
+    height: 200px;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 7.5px;
+    background: url(../../../assets/images/abstract-background.jpeg);
+    background-size: cover;
+    animation: scaleDown 0.1s ease;
+    @media screen and (max-width: 500px) {
+      width: calc(100vw - 15px);
+    }
+
+    .blaze__call__inner {
+      height: 200px;
+      width: 450px;
+      background: var(--call-modal-bg);
+      backdrop-filter: blur(30px);
+      border-radius: 7.5px;
+      z-index: 1;
+      padding: 8px 15px;
+      border: 1px solid rgba(128, 128, 128, 0.25);
+      box-shadow: 0 0 40px 20px rgba(128, 128, 128, 0.1);
+
+      @media screen and (max-width: 500px) {
+        width: calc(100vw - 15px);
+      }
+
+      .blaze__call__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        h1 {
+          color: white;
+          user-select: none;
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+
+        svg {
+          color: black;
+          background: #f1f2f2c7;
+          border-radius: 50%;
+          font-size: 28px;
+          padding: 3.5px;
+          cursor: pointer;
+        }
+      }
+
+      .blaze__call__body {
+        margin-top: 20px;
+
+        .blaze__instructor__details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          // color: #e9b022;
+
+          .blaze__instructor__meta {
+            display: flex;
+            align-items: center;
+          }
+
+          .blaze__instructor__image {
+            background: linear-gradient(
+              to right,
+              rgb(243, 184, 57) 0%,
+              rgb(190, 65, 7) 50%,
+              rgb(243, 184, 57) 100%
+            );
+
+            animation: flowingText 4s linear both infinite;
+            background-size: 200% auto;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .image__main {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              background: black;
+              padding: 2px;
+              animation: fadeIn ease 0.25s both;
+
+              &.place {
+                padding: 10px;
+              }
+            }
+            .image__verified {
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              position: absolute;
+              bottom: 2px;
+              right: 2px;
+            }
+          }
+
+          .blaze__title {
+            margin-left: 10px;
+            color: white;
+
+            h1 {
+              font-weight: 500;
+            }
+
+            p {
+              padding-top: 5px;
+              font-size: 13px;
+              font-weight: 500;
+              opacity: 0.6;
+            }
+          }
+
+          @media screen and (max-width: 500px) {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+
+            .blaze__title {
+              margin-left: 5px;
+              h1 {
+                font-size: 14px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .call__actions {
+          display: flex;
+          justify-content: flex-end;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          button {
+            margin: 10px;
+            padding: 6px 10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: whitesmoke;
+          }
+
+          .accept__btn {
+            background: rgb(69, 189, 98);
+            color: white;
+            border-radius: 7.5px;
+
+            svg {
+              font-size: 18px;
+              margin-right: 5px;
+              vertical-align: -0.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

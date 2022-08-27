@@ -1,0 +1,93 @@
+.sitemap {
+  background: white;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
+
+  * {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s ease;
+  }
+
+  .sitemap__inner {
+    padding: 3rem 30px;
+    max-width: 1160px;
+    margin: auto;
+    color: rgb(61, 61, 61);
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+      padding-bottom: 10px;
+    }
+
+    .classes__wrapper {
+      .classes__section {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          padding: 5px 0 0px 0;
+          cursor: default;
+          color: black;
+          &:hover {
+            color: #338ed8;
+          }
+        }
+
+        h4 {
+          padding: 15px 0;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .sitemap__subjects {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .subject_wrapper {
+            min-width: 300px;
+            p {
+              color: grey;
+            }
+
+            .chapters_name {
+              display: flex;
+              flex-direction: column;
+              padding: 15px 0;
+
+              a {
+                font-size: 14px;
+                padding-bottom: 5px;
+                color: rgb(70, 70, 70);
+
+                &:hover {
+                  color: #338ed8;
+                }
+              }
+            }
+          }
+
+          h6 {
+            min-width: 300px;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 3.5px 0;
+            cursor: default;
+
+            &:hover {
+              color: #338ed8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

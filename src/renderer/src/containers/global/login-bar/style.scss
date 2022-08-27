@@ -1,0 +1,19 @@
+.loginBar {
+  background-color: #e8552b;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  font-weight: 500;
+}
+
+.loginBar__login {
+  border: none;
+  background-color: transparent;
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  margin-left: 16px;
+  font-weight: 600;
+  color: #e8552b;
+}

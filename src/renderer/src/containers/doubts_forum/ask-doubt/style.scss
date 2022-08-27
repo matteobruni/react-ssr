@@ -1,0 +1,588 @@
+@import "../../../styles/variables.scss";
+
+.ask-doubt-popoup-content {
+  @media only screen and (max-width: 430px) {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.ask-your-doubt-popup {
+  height: 350px;
+}
+
+.ask-doubt-popoup-content-dark {
+  background: #141414;
+  border: 1px solid rgba(70, 70, 70, 0.4);
+  border-radius: 7.5px;
+}
+
+.askDoubtPopup__Top {
+  margin-top: -35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.askDoubtPopup__categoriePicker {
+  padding: 8px 17px;
+  padding-top: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .askDoubtPopup__categoriePicker {
+    width: 80vw;
+    max-height: 90vh;
+  }
+  .askDoubtPopup__PostDoubt {
+    width: 80vw;
+    max-height: 90vh;
+  }
+  .lottie-container {
+    width: 80vw;
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .askDoubtPopup__categoriePicker {
+    width: 456px;
+    height: 300px;
+  }
+  .askDoubtPopup__PostDoubt {
+    width: 456px;
+  }
+  .lottie-container {
+    width: 456px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .askDoubtPopup__PostDoubt {
+    width: 100vw;
+  }
+  .askDoubtPopup__categoriePicker {
+    width: 100vw;
+  }
+}
+
+.askDoubtPopup__chips {
+  margin-left: -5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  button {
+    .customChip {
+      &.selected {
+        background: var(--color-highlight) !important;
+      }
+    }
+    .customChipDark {
+      &.selected {
+        background: #bb281b !important;
+      }
+    }
+  }
+}
+
+.askDoubtPopup__primary {
+  padding: 10px 34px;
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  p {
+    font-size: 18px;
+    user-select: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.askDoubtPopup__primary:focus {
+  outline: none;
+}
+
+.image-picket-btn {
+  outline: none;
+}
+
+.ask-doubt-bottom-bar {
+  padding: 16px 16px;
+  margin-bottom: 0px;
+  background: rgba(0, 0, 0, 0.062);
+
+  button:disabled {
+    background-color: rgb(72, 72, 72) !important;
+  }
+
+  @media only screen and (max-width: 430px) {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+  }
+}
+
+.askDoubtPopup__bottom {
+  padding: 23px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.askDoubtPopup__top {
+  padding: 0px 16px;
+  margin-top: 16px;
+}
+
+.askDoubtPopup__characterCount {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: end;
+  padding: 0px 20px;
+}
+
+.askDoubtPopup__textareaContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.askDoubtPopup__textarea {
+  border: none;
+  font-size: 16px;
+  margin: 8px 16px;
+  padding: 6px 10px;
+  padding-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #c0c0c0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #c0c0c0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.askDoubtPopup__textarea:focus {
+  outline: none;
+}
+
+.askDoubtPopup__textarea__dark {
+  background: rgb(15, 15, 15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.image-upload-answer > input {
+  display: none;
+}
+
+.askDoubtQuestion__bottom_add__image__icon {
+  height: 16px;
+  width: 16px;
+}
+
+.image-upload-answer > label > p {
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.askDoubtPopup__post {
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 16px;
+  background-color: var(--color-primary);
+}
+
+.askDoubtPopup__post:focus {
+  outline: none;
+}
+
+.askDoubtQuestion__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Post Doubt */
+
+/* Image Progress */
+.imagePreview {
+  max-height: 60px;
+}
+
+.image_upload_progress {
+  size: 25px;
+}
+
+.linearprogress {
+  margin-left: 8px;
+}
+
+.askDoubtPopup__btn {
+  background-color: var(--color-highlight);
+  border: none;
+  padding: 10px 0px 11px 0;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  align-self: center;
+}
+
+.askDoubtPopup__btn:hover {
+  outline: none;
+}
+
+.MuiList-padding {
+  padding-top: 0px !important;
+  // padding-bottom: 0px !important;
+  border-radius: 4px;
+}
+
+.askDoubtPopup__apply_btn {
+  border: rgb(1, 185, 1) solid 1px;
+  padding: 8px 0px 11px 0;
+  color: white;
+  background-color: rgb(1, 185, 1);
+  border-radius: 8px;
+  width: 88%;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  outline: none;
+  margin-top: 16px;
+
+  p > svg {
+    vertical-align: -0.2rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.askDoubtPopup__apply_btn:hover {
+  outline: none;
+}
+
+.askDoubtPopup__formControl {
+  .MuiInput-underline:after {
+    border-bottom: 2px solid rgb(187, 40, 27);
+  }
+  @media only screen and (max-width: 430px) {
+    width: calc(100vw - 32px);
+  }
+}
+
+.askDoubtPopup__formControl__dark {
+  color: whitesmoke;
+  @media only screen and (max-width: 430px) {
+    width: calc(100vw - 32px);
+  }
+
+  .MuiInput-underline:before {
+    transition: whitesmoke 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+  }
+
+  .MuiInput-underline:after {
+    border-bottom: 2px solid brown;
+  }
+  .MuiSelect-icon {
+    color: whitesmoke;
+  }
+
+  .MuiInputBase-root {
+    color: white;
+  }
+}
+
+.doubtTile__topLevel__dark {
+  color: whitesmoke;
+}
+
+.doubtTile__subject__dark {
+  color: whitesmoke;
+}
+
+.MuiRadio-colorPrimary {
+  color: brown;
+}
+
+.askDoubtPopup__TopRight {
+  margin-top: -4px;
+  margin-right: 12px;
+  svg {
+    padding: 3px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    height: 28px !important;
+    width: 28px;
+  }
+}
+
+.right__popup__Dark {
+  svg {
+    background-color: #3a3a3a !important;
+  }
+}
+
+.askDoubtPopup__TopLeft {
+  margin-top: -3px;
+  margin-left: 12px;
+  svg {
+    padding: 2px 2px 2px 8px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    font-size: 28px;
+  }
+}
+
+.left__popup__Dark {
+  svg {
+    background-color: #3a3a3a !important;
+  }
+}
+
+.popup-title-label {
+  display: flex;
+  justify-content: center;
+  font-weight: 540;
+  font-size: 16px;
+  line-height: 32px;
+  color: black;
+  padding: 12px 0px 8px 0px;
+}
+
+.popup-title-label-dark {
+  color: white;
+}
+
+.hr {
+  width: 100%;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+.askDoubtPopup__select {
+  color: white;
+  min-width: 100%;
+}
+
+.select__menu__Item__Wrapper {
+  margin: -8px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.select__menu__Item__dark {
+  color: white !important;
+  background-color: #1d1d1d !important;
+
+  &.last__Item {
+    margin-bottom: -0.5rem !important;
+  }
+}
+
+.select__menu__Item__dark:hover {
+  background-color: #111111 !important;
+}
+
+/* new-answer-image-preview-container */
+
+.new-doubt-image-preview-container {
+  display: flex;
+  max-width: 456px;
+  margin-top: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.new-doubt-image-preview-container .image-preview-thumbnail-container {
+  margin: 0.1rem 0.25rem;
+  border-radius: 4px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 0px 2px #464646;
+
+  svg {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    color: rgb(187, 40, 27);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+.new-doubt-image-preview-container .image-preview-thumbnail-container > img {
+  object-fit: cover;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(128, 128, 128, 0.438);
+  border-radius: 5px;
+}
+.new-doubt-image-preview-container .image-preview-thumbnail-container:after {
+  transition: all ease-in-out 250ms;
+  content: "";
+  opacity: 0;
+}
+
+// Add to your doubt
+
+.askYourDoubt__AddToDoubt__Wrapper {
+  @media screen and (max-width: 430px) {
+    position: absolute;
+    bottom: 4.75rem;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+  }
+}
+
+.darkWrapper {
+  @media screen and (max-width: 430px) {
+    background-color: rgba(20, 20, 20, 0.75);
+  }
+}
+
+.askYourDoubt__AddToDoubt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 16px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: lightgrey solid 1px;
+  background-color: var(--color-primary);
+  margin-top: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  @media screen and (max-width: 430px) {
+    width: calc(100% - 32px);
+  }
+}
+
+.askYourDoubt__AddToDoubt__label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-highlight);
+}
+
+.askYourDoubt__AddToDoubt__dark {
+  background-color: rgb(14, 14, 14);
+  border: rgb(70, 70, 70) solid 1px;
+  box-shadow: rgb(7, 7, 7) 0px 0px 16px 0px;
+
+  .askYourDoubt__AddToDoubt__label {
+    color: #bb281b;
+  }
+}
+
+.swal-button {
+  background-color: rgb(197, 87, 77);
+
+  &:not([disabled]):hover {
+    background-color: rgb(187, 40, 27);
+  }
+}
+
+// Lottie
+
+.lottie-container {
+  min-height: 360px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .posting-lottie-animation {
+    max-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    font-weight: 300;
+    color: $highlight-color;
+  }
+}
+
+.ask-doubt-popoup-loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
+  align-self: center;
+  font-size: 18px;
+  color: var(--color-text);
+  z-index: 300;
+  width: 100%;
+}
+
+.three-dots-loader {
+  position: absolute;
+  left: 44%;
+  transform: translateX(-50%);
+}
+
+.ask-doubt-popoup-loading-label {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+.snackbar {
+  // width: max-content !important;
+  margin: auto;
+  bottom: 10vh !important;
+
+  .MuiSnackbarContent-root {
+    color: black !important;
+    background-color: rgba(218, 216, 203, 0.925) !important;
+    border-radius: 25px !important;
+    box-shadow: none !important;
+
+    .MuiSnackbarContent-message {
+      padding: 5px 0 !important;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.snackbarDark > .MuiSnackbarContent-root {
+  color: white !important;
+  background-color: rgba(51, 50, 50, 0.925) !important;
+}

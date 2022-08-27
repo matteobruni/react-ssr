@@ -1,0 +1,62 @@
+@import "../../../../styles/variables.scss";
+
+.filterOption {
+  display: flex;
+  margin-right: 16px;
+  border-radius: 8px;
+  padding: 8px 6px;
+  margin-top: 4px;
+
+  cursor: pointer;
+}
+
+.filterOptionSelected {
+  background-color: var(--color-newsfeed-sidebar-highlight);
+  // background: rgba(255,255,255,0.5);
+
+  > .filterOption_content {
+    color: black;
+  }
+}
+
+.filterOptionHover:hover {
+  // background-color: #f5f5f5;
+  background: var(--color-doubt-sidebar-category-hover);
+}
+
+.filterOption_icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: var(--color-news-filter-icon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filterOption_iconSelected {
+  color: var(--color-primary);
+  background: var(--news-filter-chip);
+}
+
+.filterOption_iconSelected2 {
+  color: var(--color-primary);
+  background: var(--news-filter-chip);
+
+  > img {
+    filter: var(--filter-white);
+  }
+}
+
+.filterOption_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 500;
+  size: 15px;
+  line-height: 20px;
+  // color: #050505;
+  color: var(--color-doubt-forum-header);
+}

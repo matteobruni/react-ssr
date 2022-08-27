@@ -1,0 +1,294 @@
+@import "../../../../styles/variables.scss";
+
+.newsfeed-post {
+  width: 95vw;
+  max-width: $doubt-tile-width;
+  // max-width: 610px;
+  @media only screen and (max-width: 720px) {
+    width: 100%;
+  }
+
+  margin-bottom: 12px;
+  border-radius: 4px;
+  // background: $light-color;
+  // border: 1px solid #d6d8d8;
+  background: var(--color-primary);
+  border: 1px solid var(--shadow-color);
+  z-index: 50;
+
+  .post-info {
+    padding: 12px 16px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .user-details {
+      display: flex;
+      align-items: center;
+
+      .user-info {
+        margin-left: 0.5rem;
+
+        h5 {
+          font-weight: 560;
+          font-size: 15px;
+          // color: #050505;
+          color: var(--color-doubt-forum-header);
+        }
+        p {
+          font-size: 12px;
+          // color: #616164;
+          color: var(--color-doubt-forum-subheader);
+        }
+      }
+    }
+
+    .post-timestamp {
+      // color: #616164;
+      color: var(--color-doubt-forum-subheader);
+
+      font-size: 13px;
+      line-height: 19px;
+      font-weight: 400;
+    }
+  }
+
+  .post-controls {
+    padding: 7px 16px;
+    border-top: 0.1rem solid var(--shadow-color);
+    // padding: 0 1.5rem 0 0rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    // color: #636466;
+    color: var(--color-doubt-forum-subheader);
+
+    > div > img {
+      cursor: pointer;
+      filter: var(--filter-doubt-action);
+    }
+
+    .post-interactions {
+      display: flex;
+      flex: 0.35;
+
+      .post-option {
+        border-radius: 5px 5px 0px 0px;
+        transition: all ease-in-out 250ms;
+        cursor: pointer;
+        display: flex;
+        opacity: 0.7;
+        font-size: 0.9em;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background: $focus-color;
+          color: $highlight-color;
+        }
+        .option-icon i {
+          margin-right: 0.5rem;
+        }
+      }
+
+      @media only screen and (max-width: 720px) {
+        flex: 1;
+      }
+    }
+  }
+
+  .post-comments {
+    transition: all ease-in-out 250ms;
+
+    display: block;
+    overflow: hidden;
+
+    .view-more-btn {
+      display: flex;
+      justify-content: center;
+      margin: 0 0.5rem;
+      padding: 0.25rem 0;
+      border-radius: 50px;
+      border: 1px solid $highlight-color;
+      color: $highlight-color;
+      transition: all ease-in-out 250ms;
+      cursor: pointer;
+      &:hover {
+        color: var(--color-primary);
+        background: $highlight-color;
+      }
+    }
+    .comment {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $focus-color;
+
+      .comment-edit-wrapper {
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .comment-edit-inputbox {
+          width: 100%;
+          padding: 0.5rem 1rem;
+          border-radius: 50px;
+          outline: none;
+          background: $focus-color;
+          border: none;
+        }
+
+        .comment-edit-actions {
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+          margin: 0.5rem 0rem;
+
+          .edit-action-button {
+            cursor: pointer;
+            padding: 0.25rem 1rem;
+            background: none;
+            border: 1px solid $highlight-color;
+            border-radius: 50px;
+            outline: none;
+            transition: all ease-in-out 200ms;
+
+            &:hover {
+              background: $focus-color;
+            }
+
+            &.update {
+              margin-left: 0.25rem;
+              background: $highlight-color;
+              color: $light-color;
+
+              &:hover {
+                background: #510505;
+              }
+            }
+          }
+        }
+      }
+
+      .comment-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+
+        .comment-actions {
+          display: flex;
+
+          .comment-action {
+            margin: 0 0.25rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+          }
+        }
+
+        .comment-user {
+          display: flex;
+
+          .comment-user-thumb {
+            > img {
+              border-radius: 50%;
+              height: 38px;
+            }
+            margin-right: 0.5rem;
+          }
+          .comment-user-details {
+            h3 {
+              font-size: 1em;
+            }
+            .comment-timestamp {
+              font-size: 0.75em;
+              color: $icon-color;
+            }
+          }
+        }
+      }
+
+      .comment-body {
+        padding: 0 1rem;
+      }
+
+      &.last-comment {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .post-new-comment {
+      display: flex;
+      flex: 1;
+      padding: 0.5rem 1rem;
+      .user-avatar {
+        height: 36px;
+        width: 36px;
+        margin-right: 0.5rem;
+        > img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .user-input-wrapper {
+        flex: 1;
+
+        .user-input {
+          width: 100%;
+          padding: 0.5rem 0.5rem;
+          border: none;
+          word-break: break-all;
+          outline: none;
+          border-radius: 15px;
+          background: $focus-color;
+          display: inline-block;
+          min-height: 36px;
+          max-height: 200px;
+          overflow-y: auto;
+        }
+      }
+
+      .user-comment-submit {
+        margin: 0 0.5rem;
+
+        .user-comment-submit-btn {
+          padding: 0.5rem 0.5rem;
+          outline: none;
+          cursor: pointer;
+          height: 36px;
+          width: 36px;
+          border-radius: 50px;
+          background: $focus-color;
+          color: $highlight-color;
+          transition: all ease-in-out 250ms;
+          border: none;
+
+          > .MuiSvgIcon-root {
+            width: auto;
+            height: auto;
+          }
+
+          &:hover {
+            background: $highlight-color;
+            color: $focus-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+#simple-menu {
+  .customMenuItem {
+    background: var(--color-primary);
+  }
+  .MuiList-padding {
+    padding-bottom: 0px !important;
+  }
+
+  .MuiMenuItem-root {
+    padding: 8px 8px !important;
+    width: 100%;
+  }
+}

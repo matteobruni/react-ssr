@@ -1,0 +1,43 @@
+.pustack-tab-button {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: #383838;
+  display: flex;
+  border-radius: .5em;
+  position: relative;
+  overflow: hidden;
+
+  &-slider {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #1c90ff;
+    z-index: 1;
+    transition: .25s cubic-bezier(.34,.75,.01,.83);
+    pointer-events: none;
+  }
+
+  &-item {
+    padding: 1em 2.5em;
+    font-size: 1.45em;
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    text-transform: capitalize;
+
+    &.active {
+      background: linear-gradient(135deg, #02c3fe 0%, #00c0fc 100%);
+    }
+
+    &:first-child {
+      border-radius: .5em 0 0 .5em;
+    }
+
+    &:last-child {
+      border-radius: 0 .5em .5em 0;
+    }
+  }
+}

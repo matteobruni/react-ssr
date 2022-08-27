@@ -1,0 +1,115 @@
+.classroom__navbar {
+  background: #29303b;
+  height: var(--header-height);
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+  box-shadow: 1px 1px 5px rgb(32, 32, 32);
+  padding: 0 1rem;
+
+  a {
+    min-width: auto !important;
+    max-width: auto !important;
+  }
+
+  .classroom__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    position: relative;
+
+    p {
+      position: absolute;
+      right: 0.4rem;
+      font-size: 8px;
+      top: 2.35rem;
+      color: white;
+      animation: proLoading ease 0.5s;
+      animation-fill-mode: both;
+      animation-delay: 0s;
+    }
+
+    > img {
+      display: block;
+      height: 58px;
+    }
+
+    @media only screen and (max-width: 430px) {
+      margin-left: -0.65rem;
+    }
+  }
+
+  @keyframes proLoading {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .separator {
+    font-size: 1.5rem;
+    margin: 0 0.65rem;
+    margin-left: 0.1rem;
+    font-weight: 300;
+    filter: brightness(0.5);
+  }
+
+  .classroom__chapter__name {
+    font-size: 1.1rem;
+    font-weight: 300;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+      max-width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .classroom__progress {
+    margin-left: auto;
+    margin-right: 1rem;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    &.no_user {
+      width: unset !important;
+      height: unset !important;
+    }
+
+    .CircularProgressbar {
+      vertical-align: middle !important;
+    }
+
+    .fa-trophy {
+      margin-top: 2px;
+      font-size: 1rem;
+    }
+
+    .cup__golden {
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 187, 0) 20%,
+        #ffef95 84%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media only screen and (max-width: 430px) {
+      margin-right: 0rem;
+      min-width: 36px;
+    }
+  }
+}

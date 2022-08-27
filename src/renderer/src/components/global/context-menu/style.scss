@@ -1,0 +1,33 @@
+.context-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  padding: 4px 0;
+  animation: comeIn .15s ease-in-out forwards;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .05), 0 10px 20px 0 rgba(0, 0, 0, .04), 0 0 10px 0 rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
+
+.context-menu-item {
+  white-space: nowrap;
+  color: var(--color-text);
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+
+@keyframes comeIn {
+  0% {
+    opacity: 0;
+    zoom: 0.91;
+  }
+  100% {
+    opacity: 1;
+    zoom: 1;
+  }
+}

@@ -1,0 +1,53 @@
+.doubtTile__commentSection {
+  // background-color: #f7f7f8;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-doubt-comment-bg);
+
+}
+
+.doubtTile__commentSectionInput {
+  flex: 1;
+  font-size: 15px;
+  color: var(--color-doubt-forum-header);
+  border: 1px solid #dde0e1;
+  font-weight: 400;
+  border-radius: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: none;
+  resize: none;
+}
+
+.doubtTile__commentSectionInput:focus {
+  outline: none;
+}
+
+.doubtTile__commentSectionButton {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.doubtTile__commentSectionButton:focus {
+  outline: none;
+}
+
+/*  */

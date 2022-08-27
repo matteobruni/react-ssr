@@ -1,0 +1,71 @@
+.customChip {
+  // display: inline-block;
+  display: flex;
+  background: #eeeff0;
+  padding: 8px 12px;
+  margin: 3px 3px;
+  border-radius: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  align-items: center;
+  position: relative;
+
+  .new__doubt {
+    background-color: rgb(196, 5, 5);
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    right: -2.5%;
+    top: -2.5%;
+    border: 2.5px solid var(--color-primary);
+  }
+
+  .leading__icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-right: 5px;
+  }
+
+  &.selected,
+  &.selected:hover {
+    background: linear-gradient(to left, #9ce85e, #1fbfff) !important;
+  }
+
+  &.filtered {
+    background-color: var(--color-highlight) !important;
+    .leading__icon {
+      fill: white;
+      filter: invert(100%) sepia(59%) saturate(0%) hue-rotate(295deg)
+        brightness(115%) contrast(100%);
+    }
+    &:hover {
+      background-color: #891010 !important;
+    }
+  }
+}
+
+.customChip:hover {
+  background: #cecece !important;
+}
+
+.customChipDark {
+  background-color: rgb(72, 72, 72);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.customChipDark {
+  &.filtered,
+  &.filtered:hover,
+  &.selected,
+  &.selected:hover {
+    background: #bb281b !important;
+  }
+}
+
+.customChipDark:hover {
+  background: #333333 !important;
+}
